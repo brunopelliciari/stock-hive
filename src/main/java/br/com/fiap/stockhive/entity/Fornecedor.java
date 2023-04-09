@@ -33,7 +33,7 @@ public class Fornecedor {
 	@SequenceGenerator (name = "SEQ_ID_FORNECEDOR", allocationSize = 25)
 	@GeneratedValue(generator = "SEQ_ID_FORNECEDOR", strategy = GenerationType.SEQUENCE)
 	@Column (name = "IDFORNECEDOR")
-	private Long fornecedorId;
+	private Integer fornecedorId;
 	
 	@Column (name = "NOME")
 	private String nome;

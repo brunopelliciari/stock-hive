@@ -29,7 +29,7 @@ public class ItemConsumoGenerico {
 	@SequenceGenerator (name = "SEQ_ID_ITEM_CONSUMO_GENERICO")
 	@GeneratedValue ( generator = "SEQ_ID_ITEM_CONSUMO_GENERICO", strategy = GenerationType.SEQUENCE)
 	@Column (name = "IDITEMGENERICO")
-	private Long itemGenericoId;
+	private Integer itemGenericoId;
 	
 	@Column (name = "NOME")
 	private String nome;

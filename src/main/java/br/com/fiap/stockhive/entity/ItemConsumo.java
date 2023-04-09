@@ -28,7 +28,7 @@ public class ItemConsumo {
 	@SequenceGenerator (name = "SEQ_ID_ITEM_CONSUMO",allocationSize = 25)
 	@GeneratedValue (generator = "SEQ_ID_ITEM_CONSUMO", strategy = GenerationType.SEQUENCE)
 	@Column (name = "IDITEMCONSUMO")
-	private Long itemConsumoId;
+	private Integer itemConsumoId;
 	
 	@Column(name = "NOME")
 	private String nome;
