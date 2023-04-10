@@ -26,10 +26,10 @@ import lombok.Setter;
 public class ItemConsumoGenerico {
 	
 	@Id
-	@SequenceGenerator (name = "SEQ_ID_ITEM_CONSUMO_GENERICO")
+	@SequenceGenerator (name = "SEQ_ID_ITEM_CONSUMO_GENERICO", allocationSize = 1)
 	@GeneratedValue ( generator = "SEQ_ID_ITEM_CONSUMO_GENERICO", strategy = GenerationType.SEQUENCE)
 	@Column (name = "IDITEMGENERICO")
-	private Integer itemGenericoId;
+	private Integer itemConsumoGenericoId;
 	
 	@Column (name = "NOME")
 	private String nome;

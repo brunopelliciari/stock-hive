@@ -1,18 +1,25 @@
 package br.com.fiap.stockhive.controller;
 
-import br.com.fiap.stockhive.entity.ItemConsumoGenerico;
-import br.com.fiap.stockhive.service.ItemConsumoGenericoService;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
-@Slf4j
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.fiap.stockhive.entity.ItemConsumoGenerico;
+import br.com.fiap.stockhive.service.ItemConsumoGenericoService;
+import lombok.RequiredArgsConstructor;
+
+
 @RestController
 @Validated
 @RequiredArgsConstructor
@@ -40,7 +47,7 @@ public class ItemConsumoGenericoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<ItemConsumoGenerico> update(@PathVariable Integer id, @RequestBody ItemConsumoGenerico item) {
-        item.setItemGenericoId(id);
+        item.setItemConsumoGenericoId(id);
         ItemConsumoGenerico updatedItem = itemConsumoGenericoService.update(item);
         return ResponseEntity.ok(updatedItem);
     }

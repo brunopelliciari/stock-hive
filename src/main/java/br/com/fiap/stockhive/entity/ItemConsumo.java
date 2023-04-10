@@ -25,7 +25,7 @@ import lombok.Setter;
 public class ItemConsumo {
 	
 	@Id
-	@SequenceGenerator (name = "SEQ_ID_ITEM_CONSUMO",allocationSize = 25)
+	@SequenceGenerator (name = "SEQ_ID_ITEM_CONSUMO", allocationSize = 1)
 	@GeneratedValue (generator = "SEQ_ID_ITEM_CONSUMO", strategy = GenerationType.SEQUENCE)
 	@Column (name = "IDITEMCONSUMO")
 	private Integer itemConsumoId;
