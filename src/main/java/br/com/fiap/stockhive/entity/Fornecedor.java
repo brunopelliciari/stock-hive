@@ -52,5 +52,4 @@ public class Fornecedor {
 	@OneToMany ( mappedBy = "fornecedor")
 	private List<ItemConsumo> itensConsumo;
 	
-
 }
