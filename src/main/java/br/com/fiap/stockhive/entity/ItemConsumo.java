@@ -21,7 +21,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Entity
-@Table (name = "T_ITEM_CONSUMO")
+@Table (name = "T_ITEMCONSUMO")
 public class ItemConsumo {
 	
 	@Id
